@@ -7,7 +7,14 @@ class App:
         self.processInput()
         trainer = tr.Trainer(self.epsilon, self.algorithm, self.min_epsilon, self.episodes, self.max_steps, self.alpha, self.gamma)
         bestPolicy = trainer.StartTraining()
+        trainer.GenerateOutput()
+        print("Best policy learned: ", bestPolicy)
+        input("Press enter to see what the agent learned")
+        for _ in range(1000):
+            trainer.test()
         
+    
+    
     def processInput(self):
         # By default, it is greedy. Siempre va a generar la salida de matplotlib
         # -e value => Epsilon-greedy (recommended: 0.7)
@@ -23,40 +30,41 @@ class App:
             parser.add_option('-m')
             parser.add_option('-s')
             parser.add_option('-a')
-            parser.add_option('-b')
+            parser.add_option('-g')
             (options, args) = parser.parse_args()
             options = vars(options)
-            
+            print(options)
             # Processing algorithm type
-            if 'e' in options.keys():
+            if options['e'] != None:
                 self.epsilon = float(options['e'])
                 self.algorithm = 'EpsilonGreedy'
                 self.min_epsilon = None
-            elif 'd' in options.keys():
-                self.epsilon = float((options['d'].split(' '))[0])
-                self.min_epsilon = float((options['d'].split(' '))[1])
+            elif options['d'] != None:
+                
+                self.epsilon = float((options['d'].split(','))[0])
+                self.min_epsilon = float((options['d'].split(','))[1])
                 self.algorithm = 'EpsilonDescendantGreedy'
             else:
                 self.epsilon = 0
                 self.algorithm = 'Greedy'
                 self.min_epsilon = None
                 
-            if 'm' in options.keys():
+            if options['m'] != None:
                 self.episodes = int(options['m'])
             else:
                 self.episodes = 50000
                 
-            if 's' in options.keys() and int(options['s']<200):
+            if options['s'] != None and int(options['s'])<200:
                 self.max_steps = int(options['s'])
             else:
                 self.max_steps = 200
                 
-            if 'a' in options.keys()):
+            if options['a'] != None:
                 self.alpha = float(options['a'])
             else:
                 self.alpha = 0.05
                 
-            if 'g' in options.keys()):
+            if options['g'] != None:
                 self.gamma = float(options['g'])
             else:
                 self.gamma = 0.95
