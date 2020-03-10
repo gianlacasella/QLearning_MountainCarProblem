@@ -49,7 +49,7 @@ On the following picture can be seen the ε-Greedy-Descendant algorithm explorat
 the ε value
 
 <p align="center">
-  <img src="outputs/greedyDescendantEpsilon.jpg" width="700px" height="500px">
+  <img src="outputs/greedyDescendantEpsilon.jpg" width="1000px" height="500px">
 </p>
 
 
