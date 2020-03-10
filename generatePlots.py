@@ -28,9 +28,58 @@ for filename in filenames:
         epsilons.append(ep[3])
     ALL_DATA_DICT[filename] = {'episodes':episodes, 'total':totalRewards,'best':bestRewards,'epsilons':epsilons}
     
+fig=pt.figure()
+fig.suptitle('Best rewards vs Iterations of 4 different Epsilon use')
+ax=fig.add_subplot(111)
+ax.set_xlabel('Iterations')
+ax.set_ylabel('Best reward')
 X=np.arange(0,50000)
-pt.plot(X,ALL_DATA_DICT["output_greedy_descendant_algorithm.txt"]['best'])
-pt.plot(X,ALL_DATA_DICT["output_greedy_algorithm.txt"]['best'])
-pt.plot(X,ALL_DATA_DICT["output_greedy_,3_algorithm.txt"]['best'])
-pt.plot(X,ALL_DATA_DICT["output_greedy_,7_algorithm.txt"]['best'])
-pt.show()
+pt.plot(X,ALL_DATA_DICT["output_greedy_descendant_algorithm.txt"]['best'], color="blue", label="Epsilon Greedy Descendant (from 1 to 0.005)")
+pt.plot(X,ALL_DATA_DICT["output_greedy_algorithm.txt"]['best'], color="red", label="Greedy")
+pt.plot(X,ALL_DATA_DICT["output_greedy_,3_algorithm.txt"]['best'], color="green", label="Epsilon Greedy (.3)")
+pt.plot(X,ALL_DATA_DICT["output_greedy_,7_algorithm.txt"]['best'], color="yellow", label="Epsilon Greedy(.7)")
+pt.legend(loc="upper left")
+pt.ylim(-210, -30)
+pt.savefig('./outputs/4plots.jpg',dpi=500)
+
+k=0
+for i in ALL_DATA_DICT["output_greedy_descendant_algorithm.txt"]['epsilons']:
+    if i<0.005:
+        minimum=k
+        break
+    k+=1
+
+k=0
+for i in ALL_DATA_DICT["output_greedy_descendant_algorithm.txt"]['epsilons']:
+    if i<0.5:
+        half=k
+        break
+    k+=1
+
+fig.clf()
+fig.suptitle('Rewards vs Iterations of the Greedy Descendant Algorithm')
+ax=fig.add_subplot(111)
+ax.set_xlabel('Iterations')
+ax.set_ylabel('Rewards')
+X=np.arange(0,50000)
+pt.plot(X,ALL_DATA_DICT["output_greedy_descendant_algorithm.txt"]['total'], color="blue", label="Reward")
+pt.plot(X,ALL_DATA_DICT["output_greedy_descendant_algorithm.txt"]['best'], color="red", label="Best reward")
+pt.axvline(minimum, color="yellow", label="Epsilon is minimum (0.005 by default)")
+pt.legend(loc="upper left")
+pt.ylim(-200, -40)
+pt.savefig('./outputs/greedyDescendant.jpg',dpi=500)
+
+
+
+fig.clf()
+fig.suptitle('Rewards vs Iterations of the Greedy Descendant Algorithm')
+ax=fig.add_subplot(111)
+ax.set_xlabel('Iterations')
+ax.set_ylabel('Rewards')
+X=np.arange(0,50000)
+pt.plot(X,ALL_DATA_DICT["output_greedy_descendant_algorithm.txt"]['best'], color="blue", label="Best reward")
+pt.axvline(half, color="red", label="Epsilon is 0.5")
+pt.axvline(minimum, color="yellow", label="Epsilon is minimum (0.005 by default)")
+pt.legend(loc="upper left")
+pt.ylim(-200, -40)
+pt.savefig('./outputs/greedyDescendantEpsilon.jpg',dpi=500)
