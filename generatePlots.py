@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+import numpy as np
+from matplotlib import pyplot as pt
+
 ALL_DATA_DICT = {}
 
 filenames = ["output_greedy_algorithm.txt", "output_greedy_,3_algorithm.txt",
@@ -25,4 +28,9 @@ for filename in filenames:
         epsilons.append(ep[3])
     ALL_DATA_DICT[filename] = {'episodes':episodes, 'total':totalRewards,'best':bestRewards,'epsilons':epsilons}
     
-
+X=np.arange(0,50000)
+pt.plot(X,ALL_DATA_DICT["output_greedy_descendant_algorithm.txt"]['best'])
+pt.plot(X,ALL_DATA_DICT["output_greedy_algorithm.txt"]['best'])
+pt.plot(X,ALL_DATA_DICT["output_greedy_,3_algorithm.txt"]['best'])
+pt.plot(X,ALL_DATA_DICT["output_greedy_,7_algorithm.txt"]['best'])
+pt.show()
