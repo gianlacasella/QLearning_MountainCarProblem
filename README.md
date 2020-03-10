@@ -30,15 +30,13 @@ The parameters used to make the comparison are:
 * On the ε-Greedy-Descendant:
 	1. Starting ε: 1
 	2. Minimum ε: 0.005
-	3. Discount factor (for each step): 3ε/10000000
+	3. ε Decay (for each step): 3ε/10000000
 
 Algorithms comparation         |  The best one (ε-Greedy-Descendant)
 :-----------------------------:|:----------------------------------:
 ![](outputs/4plots.jpg)        |  ![](outputs/greedyDescendant.jpg)
 
 As can be seen in the previous images, the ε-Greedy-Descendant algorithm was the best as expected:
-
-<center>
 
 | Algorithm             | Best reward    |
 | --------------------- |:--------------:|
@@ -47,9 +45,9 @@ As can be seen in the previous images, the ε-Greedy-Descendant algorithm was th
 | Greedy                | -91            |
 | ε-Greedy-Descendant   | -86            |
 
-</center>
-
-
+On the following picture can be seen the ε-Greedy-Descendant algorithm exploration and exploitation phases and
+the ε value
+![](outputs/greedyDescendantEpsilon.jpg) 
 
 ## Prerequisites
 * Python 3.5
