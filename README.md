@@ -87,7 +87,7 @@ Example:
 ```
 python main.py -d 1,0.005 -m 40000 -s 150 -a 0.3 -g 0.98
 ```
-**It will generate youroutput.txt with the training info, and you will see the best policy founded by the agent on the Terminal/Command Prompt**
+**It will generate yourOutput.txt with the training info, and you will see the best policy founded by the agent on the Terminal/Command Prompt**
 
 ## What I learned
 
