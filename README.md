@@ -2,18 +2,23 @@
 
 ## Using QLearning on the OpenAI's MountainCar-v0 environment
 
-With this project, I trained an AI Agent with Reinforcement Learning (QLearning) on the OpenAI's [MountainCar-v0](https://gym.openai.com/envs/MountainCar-v0/) environment.
-The goal is to drive up the mountain on the right; however, the car's engine is not strong enough to scale the mountain in a single pass. Therefore, the only way to succeed is to drive back and forth to build up momentum.
+On this project, I trained an AI Agent with **Model-free Reinforcement Learning (QLearning)** on the OpenAI's [MountainCar-v0](https://gym.openai.com/envs/MountainCar-v0/) environment.
+<br>The goal is to drive up the mountain on the right; however, **the car's engine is not strong enough to scale the mountain in a single pass**. Therefore, the only way to succeed is to drive back and forth to build up momentum.
+
 <p align="center">
   <img src="img/MountainCarGif.gif">
 </p>
 
+In order to make the Agent succeed, I used Markov Processes and the Bellman Equation to make the pairs (state, action) quality update:
 
-A program that **solves Statics Truss Problems, made with a mix of C# (used for GUI) and Python (used to solve the problems and graphing the result: Scipy and Matplotlib)**. With this program, you will be able to **save the problem solution graph and the nodes, connections and forces** in a very high resolution.
+<p align="center">
+  <img src="img/equation.svg">
+</p>
 
-Program view (solved problem)|  Full size view (solved problem)
-:---------------------------:|:--------------------------------:
-![](img/sts12.JPG)           |  ![](img/sts13.JPG)
+
+## My results
+
+
 
 
 ## Prerequisites
