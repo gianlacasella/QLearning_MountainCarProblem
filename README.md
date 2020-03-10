@@ -9,7 +9,7 @@ On this project, I trained an AI Agent with **Model-free Reinforcement Learning 
   <img src="img/MountainCarGif.gif">
 </p>
 
-In order to make the Agent succeed, I used Markov Processes and the Bellman Equation to make the pairs (state, action) quality update:
+In order to make the Agent succeed, I used Markov Processes and the Bellman Equation to make the state-action pairs quality update:
 
 <p align="center">
   <img src="img/equation.svg">
@@ -18,6 +18,12 @@ In order to make the Agent succeed, I used Markov Processes and the Bellman Equa
 
 ## My results
 
+The environment gives a living reward of -1 on each step the Agent makes, and has a maximum of 200 steps per episode. Thats why,
+at the training beginning the Best Rewards are -200. I tried to compare Greedy, ε-Greedy and ε-Greedy-Descendant algorithms.
+
+<p align="center">
+  <img src="outputs/4plots.jpg">
+</p>
 
 
 
