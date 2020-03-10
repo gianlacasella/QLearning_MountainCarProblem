@@ -39,7 +39,7 @@ Algorithms comparation         |  The best one (ε-Greedy-Descendant)
 As can be seen in the previous images, the ε-Greedy-Descendant algorithm was the best as expected:
 
 <p align="center">
-  <img src="img/table.JPG">
+  <img src="img/Table.JPG">
 </p>
 
 On the following picture can be seen the ε-Greedy-Descendant algorithm exploration and exploitation phases and
