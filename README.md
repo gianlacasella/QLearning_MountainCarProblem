@@ -4,7 +4,7 @@
 
 With this project, I trained an AI Agent with Reinforcement Learning (QLearning) on the OpenAI's [MountainCar-v0](https://gym.openai.com/envs/MountainCar-v0/) environment.
 The goal is to drive up the mountain on the right; however, the car's engine is not strong enough to scale the mountain in a single pass. Therefore, the only way to succeed is to drive back and forth to build up momentum.
-![](img/MountainCar-v0.PNG)
+![](img/MountainCarGif.gif)
 
 A program that **solves Statics Truss Problems, made with a mix of C# (used for GUI) and Python (used to solve the problems and graphing the result: Scipy and Matplotlib)**. With this program, you will be able to **save the problem solution graph and the nodes, connections and forces** in a very high resolution.
 
