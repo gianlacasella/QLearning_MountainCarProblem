@@ -9,7 +9,7 @@ On this project, I trained an AI Agent with **Model-free Reinforcement Learning 
   <img src="img/MountainCarGif.gif">
 </p>
 
-In order to make the Agent succeed, I used Markov Processes and the Bellman Equation to make the state-action pairs quality update:
+In order to make the Agent succeed, I used **Markov Processes** and the **Bellman Equation** to make the state-action pairs quality update:
 
 <p align="center">
   <img src="img/equation.svg">
@@ -36,13 +36,13 @@ Algorithms comparation         |  The best one (ε-Greedy-Descendant)
 :-----------------------------:|:----------------------------------:
 ![](outputs/4plots.jpg)        |  ![](outputs/greedyDescendant.jpg)
 
-As can be seen in the previous images, the ε-Greedy-Descendant algorithm was the best as expected:
+As can be seen in the previous images, **the ε-Greedy-Descendant algorithm was the best as expected**:
 
 <p align="center">
   <img src="img/Table.JPG">
 </p>
 
-On the following picture can be seen the ε-Greedy-Descendant algorithm exploration and exploitation phases and
+On the following picture can be seen **the ε-Greedy-Descendant algorithm exploration and exploitation phases** and
 the ε value
 
 <p align="center">
@@ -58,7 +58,7 @@ the ε value
 
 ## Getting started
 
-Clone this repository, open the Terminal/Command Prompt inside it. The parameters for the execution are:
+Clone this repository, open the Terminal/Command Prompt on it. The execution parameters are:
 
 ```
         # -e value => Selects ε-Greedy with ε=value
@@ -73,9 +73,9 @@ Clone this repository, open the Terminal/Command Prompt inside it. The parameter
 
         # -s steps => Sets the max number of steps per episode (Default:200 and should be smaller than 201)
 
-        # -a value => Sets Alpha value
+        # -a value => Sets Alpha value (Default: 0.05)
 
-        # -g value => Sets Gamma value
+        # -g value => Sets Gamma value (Default: 0.95)
 ```
 
 To run your own training, type in the Terminal/CommandPrompt:
@@ -87,6 +87,7 @@ Example:
 ```
 python main.py -d 1,0.005 -m 40000 -s 150 -a 0.3 -g 0.98
 ```
+**It will generate youroutput.txt with the training info, and you will see the best policy founded by the agent on the Terminal/Command Prompt**
 
 ## What I learned
 
