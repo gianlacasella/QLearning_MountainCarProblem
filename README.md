@@ -60,8 +60,7 @@ the ε value
 
 Clone this repository, open the Terminal/Command Prompt inside it. The parameters for the execution are:
 ```
-		
-		# -e value => Selects ε-Greedy with ε=value
+        # -e value => Selects ε-Greedy with ε=value
         # -d init min => Selects Epsilon-Descendant-Greedy with  ε=init and min_ε=min
         If neither of the previous two parameters are given, the training will be done with the Greedy algorithm
         # -m ep => Sets the number of episodes (Default: 50000)
