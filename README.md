@@ -54,9 +54,21 @@ the ε value
 * Python 3.5
 * Matplotlib
 * Numpy
-* Gym
+* OpenAI's Gym
 
 ## Getting started
+
+Clone this repository, open the Terminal/Command Prompt inside it. The parameters for the execution are:
+```
+		
+		# -e value => Selects ε-Greedy with ε=value
+        # -d init min => Selects Epsilon-Descendant-Greedy with  ε=init and min_ε=min
+        If neither of the previous two parameters are given, the training will be done with the Greedy algorithm
+        # -m ep => Sets the number of episodes (Default: 50000)
+        # -s steps => Sets the max number of steps per episode (Default:200 and should be smaller than 201)
+        # -a value => Sets Alpha value
+        # -g value => Sets Gamma value
+```
 
 
 
