@@ -89,7 +89,7 @@ class Trainer:
     
     
     def GenerateOutput(self):
-        output = open("output.txt", "w")
+        output = open("yourOutput.txt", "w")
         for line in self.outputList:
             output.write(line)
         output.close()
