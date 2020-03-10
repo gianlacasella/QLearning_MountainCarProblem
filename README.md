@@ -21,10 +21,25 @@ In order to make the Agent succeed, I used Markov Processes and the Bellman Equa
 The environment gives a living reward of -1 on each step the Agent makes, and has a maximum of 200 steps per episode. Thats why,
 at the training beginning the Best Rewards are -200. I tried to compare Greedy, ε-Greedy and ε-Greedy-Descendant algorithms.
 
+The parameters used to make the comparison are:
+* 50000 episodes
+* Learning rate 0.05
+* Discount factor 0.95
+* On the Greedy, obviously ε=0
+* On the ε-Greedy I used two values of ε: 0.3 and 0.7
+* On the ε-Greedy-Descendant:
+	1. Starting ε: 1
+	2. Minimum ε: 0.005
+	3. Discount factor (for each step): 3ε/10000000
 
 Algorithms comparation         |  The best one (ε-Greedy-Descendant)
 :-----------------------------:|:----------------------------------:
 ![](outputs/4plots.jpg)        |  ![](outputs/greedyDescendant.jpg)
+
+
+
+
+
 
 
 ## Prerequisites
