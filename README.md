@@ -38,12 +38,9 @@ Algorithms comparation         |  The best one (ε-Greedy-Descendant)
 
 As can be seen in the previous images, the ε-Greedy-Descendant algorithm was the best as expected:
 
-| Algorithm             | Best reward    |
-| --------------------- |:--------------:|
-| ε-Greedy (ε=0.7)      | -166           |
-| ε-Greedy (ε=0.3)      | -110           |
-| Greedy                | -91            |
-| ε-Greedy-Descendant   | -86            |
+<p align="center">
+  <img src="img/table.jpg">
+</p>
 
 On the following picture can be seen the ε-Greedy-Descendant algorithm exploration and exploitation phases and
 the ε value
