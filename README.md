@@ -3,7 +3,7 @@
 ## Using QLearning on the OpenAI's MountainCar-v0 environment
 
 On this project, I trained an AI Agent with **Model-free Reinforcement Learning (QLearning)** on the OpenAI's [MountainCar-v0](https://gym.openai.com/envs/MountainCar-v0/) environment.
-<br>The goal is to drive up the mountain on the right; however, **the car's engine is not strong enough to scale the mountain in a single pass**. Therefore, the only way to succeed is to drive back and forth to build up momentum.
+<br><br>The main goal is to drive up the mountain on the right; however, **the car's engine is not strong enough to scale the mountain in a single pass**. Therefore, the only way to succeed is to drive back and forth to build up momentum.
 
 <p align="center">
   <img src="img/MountainCarGif.gif">
@@ -36,9 +36,14 @@ Algorithms comparation         |  The best one (ε-Greedy-Descendant)
 :-----------------------------:|:----------------------------------:
 ![](outputs/4plots.jpg)        |  ![](outputs/greedyDescendant.jpg)
 
+As can be seen in the previous images, the ε-Greedy-Descendant algorithm was the best as expected:
 
-
-
+| Algorithm             | Best reward    |
+| --------------------- |:--------------:|
+| ε-Greedy (ε=0.7)      | -166           |
+| ε-Greedy (ε=0.3)      | -110           |
+| Greedy                | -91            |
+| ε-Greedy-Descendant   | -86            |
 
 
 
