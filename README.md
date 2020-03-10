@@ -47,7 +47,11 @@ As can be seen in the previous images, the ε-Greedy-Descendant algorithm was th
 
 On the following picture can be seen the ε-Greedy-Descendant algorithm exploration and exploitation phases and
 the ε value
-![](outputs/greedyDescendantEpsilon.jpg) 
+
+<p align="center">
+  <img src="outputs/greedyDescendantEpsilon.jpg" width="500px" height="500px">
+</p>
+
 
 ## Prerequisites
 * Python 3.5
