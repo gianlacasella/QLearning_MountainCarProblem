@@ -58,7 +58,7 @@ the ε value
 
 ## Getting started
 
-Clone this repository, open the Terminal/Command Prompt on it. The execution parameters are:
+Clone this repository, and open the Terminal/Command Prompt inside the folder. The execution parameters are:
 
 ```
         # -e value => Selects ε-Greedy with ε=value
